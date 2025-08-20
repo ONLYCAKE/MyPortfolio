@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "installCommand": "cd Portfolio-master && npm ci",
+  "buildCommand": "cd Portfolio-master && npm run build",
+  "outputDirectory": "Portfolio-master/build",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}
+
+
