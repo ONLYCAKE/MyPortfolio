@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+Portfolio-master/node_modules/
+
+# production
+build/
+Portfolio-master/build/
+
+# misc
+.DS_Store
+.vercel
+.env*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
