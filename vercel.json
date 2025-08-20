@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "installCommand": "cd Portfolio-master && npm ci",
-  "buildCommand": "cd Portfolio-master && CI= NODE_OPTIONS=--openssl-legacy-provider npm run build",
-  "outputDirectory": "Portfolio-master/build",
+  "env": {
+    "CI": "false",
+    "NODE_OPTIONS": "--openssl-legacy-provider"
+  },
+  "builds": [
+    {
+      "src": "Portfolio-master/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
   "routes": [
     { "handle": "filesystem" },
     { "src": "/.*", "dest": "/index.html" }
