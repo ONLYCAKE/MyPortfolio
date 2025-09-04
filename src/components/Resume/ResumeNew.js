@@ -8,9 +8,8 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 
-import { pdfjs } from 'react-pdf';
+// ✅ Set the worker from CDN (only once)
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
@@ -62,3 +61,6 @@ function ResumeNew() {
 }
 
 export default ResumeNew;
+// git add src/components/ResumeNew.js
+// git commit -m "Fix: remove duplicate pdfjs import"
+// git push origin master
